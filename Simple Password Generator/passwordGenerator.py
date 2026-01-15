@@ -43,7 +43,9 @@ def generate_password():
 
     # print(char_pool) #abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
 
-    password = "".join(random.SystemRandom().choice(char_pool) for i in range(length))
+    # password = "".join(random.SystemRandom().choice(char_pool) for i in range(length))
+
+    password = "".join([random.choice(char_pool) for i in range(length)])
 
     print(f"\n Generated Password: {password}\n")
 
